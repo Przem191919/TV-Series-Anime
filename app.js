@@ -32,6 +32,27 @@ var titles = {
 }
 
 //Swiper
+//create thumbs swiper
+var thumbsSwiper = new Swiper(".thumbsSwiper",{
+    spaceBetween: 10,
+    slidesPerView: 5,
+    breakpoints:{
+        200:{
+            slidesPerView:1.5
+        },
+        400:{
+            slidesPerView:1.5
+        },
+        600:{
+            slidesPerView:3
+        },
+        1100:{
+            slidesPerView:5
+        },
+    },
+    freeMode: true,
+    watchSlidesProgress: true,
+});
 
 const swiper = new Swiper('.bannerSwiper', {
 
@@ -49,5 +70,9 @@ const swiper = new Swiper('.bannerSwiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    thumbs:{
+        swiper: thumbsSwiper
+    }
   });
   
