@@ -75,4 +75,38 @@ const swiper = new Swiper('.bannerSwiper', {
         swiper: thumbsSwiper
     }
   });
+
+  var changeTitle = (index)=>{
+    var title = document.querySelector('#title');
+    var subTitle = document.querySelector('#sub-title');
+    var desc = document.querySelector('#desc');
+    title.innerHTML =`<h1>${titles[index].title}</h1>`;
+    subTitle.innerHTML =`<p>${titles[index].subTitle}</p>`;
+    desc.innerHTML =`<p>${titles[index].desc}</p>`;
+  }
+
+  swiper.on('activeIndexChange', function(){
+    changeTitle(swiper.activeIndex);
+  })
+
+  var overlay = document.querySelector(".overlay");
+  var videoContainer = document.querySelector('#movie-trailer');
+  var showTrailer = () => {
+    var index = swiper.activeIndex;
+    videoContainer.innerHTML = `
+    <video controls autoplay id = "video">
+    <source src="assets/${titles[index].videoURL}" type="video.mp4">
+    </video>
+    `
+    overlay.classList.add('show');
+  };
+
+  var closeOverlay = () =>{
+    var video = document.querySelector("#video");
+    video.pause();
+    overlay.classList.remove('show');
+  }
+
+
+
   
