@@ -1,31 +1,31 @@
 var titles = {
     0: {
-        title: "",
+        title: "One Piece",
         subTitle: "",
-        desc: "",
+        desc: ""
     },
     1: {
-        title: "",
-        subTitle: "",
+        title: "Dragon Ball",
+        subTitle: ""
         desc: "",
     },
     2: {
-        title: "",
+        title: "Shingeki no Kyojin",
         subTitle: "",
         desc: "",
     },
     3: {
-        title: "",
+        title: "Naruto",
         subTitle: "",
         desc: "",
     },
     4: {
-        title: "",
+        title: "Kimetsu no Yaiba",
         subTitle: "",
         desc: "",
     },
     5: {
-        title: "",
+        title: "Bleach",
         subTitle: "",
         desc: "",
     },
